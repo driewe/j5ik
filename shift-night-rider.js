@@ -15,12 +15,12 @@ board.on("ready", () => {
 
     var index = 0
     var increment = 1
-
+// main loop
     board.loop(0, () => {
         register.send(bitPattern[index])
-        index = index += increment
+        index += increment
         if (index === 7 || index === 0) {
-            increment = increment*-1
+            increment *= -1
         };
     });
 });
